@@ -3,13 +3,13 @@ export const certifications = [
 {
 title: "React Advanced Certification",
 platform: "Udemy",
-year: "2025"
+year: "2026"
 },
 
 {
 title: "JavaScript Mastery",
 platform: "Udemy",
-year: "2025"
+year: "2026"
 },
 
 {

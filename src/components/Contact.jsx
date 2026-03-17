@@ -12,15 +12,15 @@ Contact Me
 
 <div className="flex justify-center gap-10 text-3xl">
 
-<a href="tel:+91XXXXXXXXXX">
+<a href="tel:+919877098312">
 <FaPhone/>
 </a>
 
-<a href="https://github.com/yourgithub">
+<a href="https://github.com/Abhey2003" target="_blank" rel="noopener noreferrer">
 <FaGithub/>
 </a>
 
-<a href="https://linkedin.com/in/abhey-johary-39a65b269">
+<a href="https://www.linkedin.com/in/abhey-johary-39a65b269/" target="_blank" rel="noopener noreferrer">
 <FaLinkedin/>
 </a>
 
