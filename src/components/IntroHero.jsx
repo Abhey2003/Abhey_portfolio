@@ -61,7 +61,7 @@ function IntroHero({ onExplore }) {
           </button>
 
           <a
-            href="/abhey_kumar_jauhari_resume.pdf"
+            href="/Abhey_React_resume.pdf"
             download
             className="bg-green-600 px-6 py-3 rounded-lg hover:bg-green-700"
           >

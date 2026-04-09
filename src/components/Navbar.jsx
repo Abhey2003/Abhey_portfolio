@@ -16,7 +16,7 @@ bg-white/10 backdrop-blur-lg border-b border-white/20">
         <li><a href="#contact">Contact</a></li>
         <li><a href="#certifications">View Certifications</a></li>
         <li><a
-          href="/abhey_kumar_jauhari_resume.pdf"
+          href="/Abhey_React_resume.pdf"
           download
           className="bg-green-600 px-4 py-2 rounded-lg"
         >
