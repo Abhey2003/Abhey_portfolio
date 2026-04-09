@@ -16,8 +16,8 @@ export const projects = [
     description:
       "A productivity web app built using React Context API for state management. Users can create, update, and track daily tasks efficiently.",
     tech: ["React", "Context API", "Tailwind"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Abhey2003/hospital-crm",
+    live: "https://hospital-crm-ruby.vercel.app/",
     image: "/images/task.png",
   },
 
@@ -29,7 +29,7 @@ export const projects = [
     tech: ["React", "Tailwind", "Framer Motion"],
     github:
       "https://github.com/Abhey2003/Abhey_portfolio",
-    live: "#",
+    live: "https://abhey-portfolio-nine.vercel.app/",
     image: "/images/portfolio.png",
   },
 ];
