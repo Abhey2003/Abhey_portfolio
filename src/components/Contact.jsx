@@ -1,35 +1,63 @@
-import {FaGithub,FaLinkedin,FaPhone} from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 
-function Contact(){
+function Contact() {
+  const contacts = [
+    {
+      icon: <FaPhone />,
+      label: "Call",
+      link: "tel:+919877098312",
+    },
+    {
+      icon: <FaGithub />,
+      label: "GitHub",
+      link: "https://github.com/Abhey2003",
+    },
+    {
+      icon: <FaLinkedin />,
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/abhey-johary-39a65b269/",
+    },
+  ];
 
-return(
+  return (
+    <section id="contact" className="py-12 sm:py-16">
+      <div className="container-custom text-center">
 
-<section id="contact" className="p-10 text-center">
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10">
+          Contact Me
+        </h2>
 
-<h2 className="text-3xl mb-6">
-Contact Me
-</h2>
+        {/* Contact Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
 
-<div className="flex justify-center gap-10 text-3xl">
+          {contacts.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center 
+                         bg-white/5 hover:bg-white/10
+                         rounded-xl p-6 shadow 
+                         hover:scale-105 hover:bg-gray-700 
+                         transition duration-300"
+            >
+              <div className="text-2xl sm:text-3xl mb-2">
+                {item.icon}
+              </div>
 
-<a href="tel:+919877098312">
-<FaPhone/>
-</a>
+              <span className="text-sm sm:text-base text-gray-300">
+                {item.label}
+              </span>
+            </a>
+          ))}
 
-<a href="https://github.com/Abhey2003" target="_blank" rel="noopener noreferrer">
-<FaGithub/>
-</a>
+        </div>
 
-<a href="https://www.linkedin.com/in/abhey-johary-39a65b269/" target="_blank" rel="noopener noreferrer">
-<FaLinkedin/>
-</a>
-
-</div>
-
-</section>
-
-)
-
+      </div>
+    </section>
+  );
 }
 
-export default Contact
+export default Contact;

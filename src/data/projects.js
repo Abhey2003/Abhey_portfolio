@@ -1,21 +1,35 @@
-export const projects=[
+export const projects = [
+  {
+    id: 1,
+    title: "Hospital CRM",
+    description:
+      "A full-stack Hospital CRM & Management System built with React.js and Firebase. It features role-based dashboards (Admin, Doctor, Patient) for managing appointments, prescriptions, and patient records efficiently.",
+    tech: ["React", "Firebase", "Tailwind"],
+    github: "https://github.com/Abhey2003/hospital-crm",
+    live: "#",
+    image: "/images/hospital.png",
+  },
 
-{
-title:"hospital CRM",
-desc:"Hospital CRM & Management System is a full-stack web application built using React.js and Firebase. It streamlines hospital operations by providing role-based dashboards for Admin, Doctor, and Patient, ensuring efficient management of appointments, prescriptions, and patient records. The Admin dashboard allows for user management and system oversight, while the Doctor dashboard facilitates appointment scheduling and prescription management. The Patient dashboard offers a user-friendly interface for booking appointments and accessing medical records. This project demonstrates proficiency in React.js for frontend development and Firebase for backend services, showcasing a comprehensive solution for healthcare management.",
-github:"https://github.com/Abhey2003/hospital-crm"
-},
+  {
+    id: 2,
+    title: "Task Manager",
+    description:
+      "A productivity web app built using React Context API for state management. Users can create, update, and track daily tasks efficiently.",
+    tech: ["React", "Context API", "Tailwind"],
+    github: "#",
+    live: "#",
+    image: "/images/task.png",
+  },
 
-{
-title:"Task Manager",
-desc:"Productivity app using Context API",
-github:"#"
-},
-
-{
-title:"Developer Portfolio",
-desc:"Developed a responsive and interactive portfolio website using React and TailwindCSS, featuring smooth animations, project showcase, certifications section, and a recruiter-friendly interface with easy navigation and resume download functionality.",
-github:"https://github.com/Abhey2003/Abhey_portfolio/commit/8380f567193352beb91e602ce81767608c51c869#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5"
-}
-
-]
+  {
+    id: 3,
+    title: "Developer Portfolio",
+    description:
+      "A fully responsive personal portfolio website built using React and TailwindCSS, featuring animations, project showcase, and recruiter-friendly UI.",
+    tech: ["React", "Tailwind", "Framer Motion"],
+    github:
+      "https://github.com/Abhey2003/Abhey_portfolio",
+    live: "#",
+    image: "/images/portfolio.png",
+  },
+];

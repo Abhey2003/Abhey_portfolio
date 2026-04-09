@@ -2,42 +2,67 @@ import { projects } from "../data/projects";
 
 function Projects() {
   return (
-    <section
-      id="projects"
-      className="p-10 mt-20 relative z-0"
-    >
-      <h2 className="text-3xl font-bold mb-6 text-center">
-        Projects
-      </h2>
+    <section id="projects" className="py-12 sm:py-16 md:py-20">
 
-      <div
-        className="relative z-0 grid md:grid-cols-2 lg:grid-cols-3 gap-6
-        bg-white/10 backdrop-blur-lg border border-white/20
-        p-6 rounded-xl shadow-lg"
-      >
-        {projects.map((project, i) => (
-          <div
-            key={i}
-            className="bg-gray-800 p-6 rounded-lg hover:scale-105 transition duration-300"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              {project.title}
-            </h3>
+      <div className="container-custom">
 
-            <p className="text-gray-300 mb-4">
-              {project.desc}
-            </p>
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">
+          Projects
+        </h2>
 
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
+        {/* Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-white/5 border border-white/10 
+              rounded-xl p-5 shadow-md 
+              hover:scale-[1.02] hover:shadow-lg 
+              transition duration-300"
             >
-              View Code
-            </a>
-          </div>
-        ))}
+
+              {/* Title */}
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                {project.title}
+              </h3>
+
+              {/* Description (FIXED HERE) */}
+              <p className="text-gray-400 text-sm sm:text-base mb-4 line-clamp-3">
+                {project.description}
+              </p>
+
+              {/* Buttons */}
+              <div className="flex gap-3">
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-white/10 border border-white/20 
+                  py-2 rounded-md text-sm hover:bg-white/20 transition"
+                >
+                  Code
+                </a>
+
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-blue-500 
+                  py-2 rounded-md text-sm hover:bg-blue-600 transition"
+                >
+                  Live
+                </a>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
       </div>
     </section>
   );

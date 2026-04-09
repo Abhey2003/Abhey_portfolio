@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function RecruiterPanel() {
-
   const [message, setMessage] = useState("Hello Recruiter 👋");
+  const [open, setOpen] = useState(false);
 
   const scrollToSection = (id, text) => {
     const section = document.getElementById(id);
@@ -10,61 +11,82 @@ function RecruiterPanel() {
     if (section) {
       setMessage(text);
       section.scrollIntoView({ behavior: "smooth" });
+      setOpen(false); // close on mobile after click
     }
   };
 
   return (
-    <div className="fixed right-6 bottom-6 bg-gray-800 text-white p-5 rounded-xl shadow-xl w-64 z-50">
+    <>
+      {/* Floating Toggle Button (Mobile Friendly) */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 z-50 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition"
+      >
+        ☰
+      </button>
 
-      <h3 className="text-lg font-semibold mb-3">
-        Recruiter Panel
-      </h3>
+      {/* Panel */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.3 }}
+            className="fixed right-4 bottom-20 sm:right-6 sm:bottom-24 
+                       w-[90%] max-w-xs bg-gray-800 text-white p-4 rounded-xl shadow-xl z-50"
+          >
+            <h3 className="text-base sm:text-lg font-semibold mb-2">
+              Recruiter Panel
+            </h3>
 
-      <p className="text-sm mb-4 text-gray-300">
-        {message}
-      </p>
+            <p className="text-xs sm:text-sm mb-3 text-gray-300">
+              {message}
+            </p>
 
-      <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
 
-        <button
-          onClick={() => scrollToSection("home", "Opening Home Section...")}
-          className="bg-gray-500 px-3 py-2 rounded hover:bg-gray-600"
-        >
-          Home
-        </button>
+              <button
+                onClick={() => scrollToSection("home", "Opening Home Section...")}
+                className="bg-gray-500 py-2 rounded text-sm hover:bg-gray-600 transition"
+              >
+                Home
+              </button>
 
-        <button
-          onClick={() => scrollToSection("skills", "Opening Skills Section...")}
-          className="bg-blue-500 px-3 py-2 rounded hover:bg-blue-600"
-        >
-          View Skills
-        </button>
+              <button
+                onClick={() => scrollToSection("skills", "Opening Skills Section...")}
+                className="bg-blue-500 py-2 rounded text-sm hover:bg-blue-600 transition"
+              >
+                View Skills
+              </button>
 
-        <button
-          onClick={() => scrollToSection("projects", "Opening Projects Section...")}
-          className="bg-green-500 px-3 py-2 rounded hover:bg-green-600"
-        >
-          View Projects
-        </button>
+              <button
+                onClick={() => scrollToSection("projects", "Opening Projects Section...")}
+                className="bg-green-500 py-2 rounded text-sm hover:bg-green-600 transition"
+              >
+                View Projects
+              </button>
 
-        <button
-          onClick={() => scrollToSection("contact", "Opening Contact Section...")}
-          className="bg-purple-500 px-3 py-2 rounded hover:bg-purple-600"
-        >
-          Contact Me
-        </button>
+              <button
+                onClick={() => scrollToSection("contact", "Opening Contact Section...")}
+                className="bg-purple-500 py-2 rounded text-sm hover:bg-purple-600 transition"
+              >
+                Contact Me
+              </button>
 
-        <a
-          href="/abhey_kumar_jauhari_resume.pdf"
-          download
-          className="bg-orange-500 px-3 py-2 rounded text-center hover:bg-orange-600"
-        >
-          Download Resume
-        </a>
+              <a
+                href="/abhey_kumar_jauhari_resume.pdf"
+                download
+                className="bg-orange-500 py-2 rounded text-center text-sm hover:bg-orange-600 transition"
+              >
+                Download Resume
+              </a>
 
-      </div>
-
-    </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 
