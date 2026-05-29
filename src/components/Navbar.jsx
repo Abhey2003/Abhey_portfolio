@@ -34,7 +34,7 @@ bg-white/5 backdrop-blur-xl border-b border-white/10 shadow-sm">
 
           <li>
             <a
-              href="/Abhey_React_resume.pdf"
+              href="/Abhey_React_resume_updated.pdf"
               download
               className="bg-green-600 px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition"
             >
