@@ -75,7 +75,7 @@ function RecruiterPanel() {
               </button>
 
               <a
-                href="/Abhey_React_resume_updated.pdf"
+                href="/Abhey_React_resume.pdf"
                 download
                 className="bg-orange-500 py-2 rounded text-center text-sm hover:bg-orange-600 transition"
               >
