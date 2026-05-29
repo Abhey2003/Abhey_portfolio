@@ -60,7 +60,7 @@ function DeveloperHero({ onExplore }) {
             </button>
 
             <a
-              href="/Abhey_React_resume_updated.pdf"
+              href="/Abhey_React_resume.pdf"
               download
               className="bg-green-600 px-6 py-3 rounded-lg text-sm sm:text-base hover:bg-green-700 transition w-full sm:w-auto text-center"
             >
